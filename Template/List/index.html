@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=yes">
+        <title>{$title}</title>
+        <meta name="keywords" content="{$keywords}">
+        <meta name="description" content="{$description}">
+        <link rel="stylesheet" href="__PUBLIC__/css/base.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/style.css" />
+    </head>
+	<body>
+		<div class="tip">
+            <div class="container">
+                <div style="float: left;">彩票软件全免费 绿色安全有保障</div>
+                <ul style="float: right;">
+                    <li class="SetHome">设为首页</li>
+                    <li class="AddFavorite">收藏本站</li>
+                </ul>
+            </div>
+        </div>
+        <header class="header">
+            <div class="container">
+                <div class="span6">
+                    <div class="header-left">
+                        <img src="__PUBLIC__/images/logo.png" />
+                        <span><img src="__PUBLIC__/images/logo-text.png"/></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="nav">
+            <div class="container">
+                <ul class="nav-ul">
+                    <li>
+                        <a class="active" href="/">首页</a>
+                    </li>
+                    <li>
+                        <a:#资讯>
+                    </li>
+                    <li>
+                        <a:#列表>
+                    </li>
+                    <li>
+                        <a:#新闻>
+                    </li>
+                    <li>
+                        <a:#体育>
+                    </li>
+                </ul>
+            </div>
+        </div>
+		<div class="serch-result">
+			<div class="container">
+				<div class="span9">
+					<div class="serch-result-left">
+						<div class="tag-panel">
+							<div class="tag-title">分类：</div>
+							<div class="tag">
+								<ul>
+									<li>
+										<a:#全部>
+									</li>
+									<li>
+										<a:#其他>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="play-tricks">
+					        <div class="play-tricks-item">
+								<ul>
+								<for start="1" end="20" comparison="elt">
+                                	<li>
+										<a:>
+										<span class="trick-publish-time"><时间></span>
+									</li>
+                                </for>
+					            </ul>
+					        </div>
+                            <div class="play-paging">
+                                <ul>
+                                    <li><a:#上一页></li>
+                                    <for start="1" end="$totalPage" comparison="elt">
+                                    	<li><a:#{$i}></li>
+                                    </for>
+                                    <li><a:#下一页></li>
+                                </ul>
+                            </div>
+						</div>
+					</div>
+				</div>
+
+				<div class="span3">
+					<div class="serch-result-right">
+	                    <div class="find">
+	                        <div class="title">
+	                            <span class="title-logo find-title-logo"></span>你是不是在找
+	                        </div>
+	                        <div class="find-link">
+	                            <ul>
+	                                <for start="1" end="11">
+	                                <li>
+	                                    <a:>
+	                                </li>
+	                                </for>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <div class="serch">
+	                        <div class="title">
+	                            <span class="title-logo serch-title-logo"></span>大家喜欢搜
+	                        </div>
+	                        <div class="find-link">
+	                            <ul>
+	                                <for start="1" end="11">
+	                                <li>
+	                                    <a:>
+	                                </li>
+	                                </for>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <div class="leaderboard">
+	                        <div class="title">
+	                            <span class="title-logo leaderboard-title-logo"></span>下载排行榜
+	                        </div>
+	                        <div class="leaderboard-link">
+	                            <for start="1" end="11">
+	                                <if condition="$i eq 0">
+	                                <div class="leaderboard-link-item active">
+	                                <else/>
+	                                <div class="leaderboard-link-item">
+	                                </if>
+	                                    <switch name="i">
+	                                        <case value="1"><span class="link-item-li link-item-li-one ">1</span></case>
+	                                        <case value="2"><span class="link-item-li link-item-li-two">2</span></case>
+	                                        <case value="3"><span class="link-item-li link-item-li-three">3</span></case>
+	                                        <default /><span class="link-item-li">{$i}</span>
+	                                    </switch>
+
+
+	                                    <div class="link-item-show"><短语></div>
+	                                    <div class="link-item-hide ">
+	                                        <a href="<随机URL链接>">
+	                                            <div class="link-item-img"><img:></div>
+	                                            <div class="link-item-download">
+	                                                <p class="download-title"><短语></p>
+	                                                <p class="download-time">下载数：<随机数>次</p>
+	                                                <span class="download-btn">高速下载</span>
+	                                            </div>
+	                                        </a>
+	                                    </div>
+	                                </div>
+	                            </for>
+	                        </div>
+	                    </div>
+	                    <div class="Baike">
+	                        <div class="title">
+	                            <span class="title-logo Baike-title-logo"></span>捷彩百科
+	                        </div>
+	                        <div class="Baike-link">
+	                            <ul>
+	                                <li>
+	                                    <a href="<随机URL链接>">
+	                                        <span class="Bike-link-item1"></span>
+	                                        <p>双色球</p>
+	                                    </a>
+	                                </li>
+	                                <li>
+	                                    <a href="<随机URL链接>">
+	                                        <span class="Bike-link-item2"></span>
+	                                        <p>竞彩足球</p>
+	                                    </a>
+	                                </li>
+	                                <li>
+	                                    <a href="<随机URL链接>">
+	                                        <span class="Bike-link-item3"></span>
+	                                        <p>大乐透</p>
+	                                    </a>
+	                                </li>
+	                                <li>
+	                                    <a href="<随机URL链接>">
+	                                        <span class="Bike-link-item4"></span>
+	                                        <p>福彩3D</p>
+	                                    </a>
+	                                </li>
+	                                <li>
+	                                    <a href="<随机URL链接>">
+	                                        <span class="Bike-link-item5"></span>
+	                                        <p>时时彩</p>
+	                                    </a>
+	                                </li>
+	                                <li>
+	                                    <a href="<随机URL链接>">
+	                                        <span class="Bike-link-item6"></span>
+	                                        <p>快三</p>
+	                                    </a>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                        <div class="Baike-play-link">
+	                            <ul>
+	                                <for start="1" end="6">
+	                                <li>
+	                                    <a:>
+	                                </li>
+	                                </for>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+			</div>
+		</div>
+        <div class="rowFluid">
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-nav">
+                        <ul>
+                            <li>
+                                <a href="/about.html" rel="nofollow" target="_blank">关于我们</a>
+                            </li>
+                            <li>
+                                <a href="/contact.html" rel="nofollow" target="_blank">联系方式</a>
+                            </li>
+                            <li>
+                                <a href="/disclaimer.html" rel="nofollow" target="_blank">免责声明</a>
+                            </li>
+                            <li>
+                                <a href="/sitemap.html" rel="nofollow" target="_blank">网站地图</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>&copy;2016-2017 捷彩下载吧 版权所有 <a style="color:#797A88;" href="http://www.miitbeian.gov.cn/" target="_blank">闽ICP备17001164号-6</a> 捷彩下载吧是一个旨在安全时时彩计划软件、彩票分析工具的网站
+                    </p>
+                </div>
+            </footer>
+        </div>
+
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/page.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $('.serch-box img').click(function(){
+                    var val = $('.serch-box input').val();
+                    if (val) {
+                        self.location = '/search_' + val + '_1.html';
+                    }
+                });
+                $('.serch-box input').keydown(function(event){
+                    if (event.keyCode == 13) {
+                        $('.serch-box img').click();
+                    }
+                });
+            });
+        </script>
+	</body>
+</html>

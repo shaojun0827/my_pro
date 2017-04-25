@@ -1,0 +1,2924 @@
+/*基础样式 reset*/
+
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	height: 100%;
+}
+
+body {
+	background-color: #fff;
+	font-family: "微软雅黑", "Microsoft Yahei", "Arial";
+	font-size: 14px;
+	line-height: 1.5;
+	color: #333;
+	overflow-x: hidden;
+	width: 100%;
+	background: #F9F9F9;
+}
+
+img {
+	border: none;
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+button,
+input,
+select,
+textarea {
+	outline: none;
+	vertical-align: middle;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+textarea {
+	resize: none;
+	overflow-y: auto;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+
+hr {
+	height: 0;
+	border-width: 1px 0 0 0;
+	border-style: solid;
+	margin: 0;
+	color: #ddd;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	margin: 0;
+}
+
+li,
+ol,
+ul {
+	list-style: none;
+	-webkit-padding-start: 0;
+}
+
+dd,
+dt {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+
+/*栅格系统*/
+
+.span1,
+.span10,
+.span11,
+.span12,
+.span2,
+.span3,
+.span4,
+.span5,
+.span6,
+.span7,
+.span8,
+.span9 {
+	float: left;
+}
+
+.span12 {
+	width: 100%;
+}
+
+.span11 {
+	width: 91.66666667%;
+}
+
+.span10 {
+	width: 83.33333333%;
+}
+
+.span9 {
+	width: 75%;
+}
+
+.span8 {
+	width: 66.66666667%;
+}
+
+.span7 {
+	width: 58.33333333%;
+}
+
+.span6 {
+	width: 50%;
+}
+
+.span5 {
+	width: 41.66666667%;
+}
+
+.span4 {
+	width: 33.33333333%;
+}
+
+.span3 {
+	width: 25%;
+}
+
+.span2 {
+	width: 16.66666667%;
+}
+
+.span1 {
+	width: 8.33333333%;
+}
+
+.container {
+	width: 96%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.container-fluid {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.rowFluid {
+	clear: both;
+}
+
+.column:after,
+.column:before,
+.rowFluid:after,
+.rowFluid:before {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	font-size: 0;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+
+/*滚动条样式*/
+
+::-webkit-scrollbar {
+	width: 10px;
+	background: transparent;
+	border-radius: 5px;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+::-webkit-scrollbar-button {
+	background: transparent;
+	height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #aaa;
+	border-radius: 5px;
+	height: 30px;
+}
+
+
+/* 轮播css */
+
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+
+/* display none until init */
+
+.owl-carousel {
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+
+.owl-carousel .owl-wrapper {
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-wrapper-outer {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.owl-carousel .owl-wrapper-outer.autoHeight {
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item {
+	float: left;
+}
+
+.owl-controls .owl-buttons div,
+.owl-controls .owl-page {
+	cursor: pointer;
+}
+
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* mouse grab icon */
+
+.grabbing {
+	cursor: url("grabbing.png") 8 8, move;
+}
+
+
+/* fix */
+
+.owl-carousel .owl-item,
+.owl-carousel .owl-wrapper {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+}
+
+
+/*
+*   Owl Carousel Owl Demo Theme 
+*   v1.3.3
+*/
+
+.owl-theme .owl-controls {
+	text-align: center;
+}
+
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div {
+	color: #ccc;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	/*IE7 life-saver */
+	font-size: 12px;
+}
+
+
+/* Clickable class fix problem with hover on touch devices */
+
+
+/* Use it for non-touch hover action */
+
+.owl-theme .owl-controls.clickable .owl-buttons div:hover {
+	filter: alpha(opacity=100);
+	/*IE7 fix*/
+	opacity: 1;
+	text-decoration: none;
+}
+
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+
+.owl-theme .owl-controls .owl-page span.owl-numbers {
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+
+/*首页css*/
+
+
+/*广告图*/
+
+.advertising {
+	margin: 15px 0;
+}
+
+.advertising img {
+	width: 1920px;
+	height: 70px;
+}
+
+.index-news {
+	overflow: hidden;
+}
+
+.content-left {
+	display: inline-block;
+	width: 100%;
+}
+
+
+/*首页新闻资讯轮播图*/
+
+.news-carousel {
+	width: 480px;
+	height: 292px;
+	border: solid 1px #EFEFEF;
+	float: left;
+	box-sizing: border-box;
+	background: #fff;
+	padding: 10px;
+}
+
+.news-carousel .item {
+	position: relative;
+}
+
+.news-carousel .item img {
+	width: 460px;
+	height: 272px;
+}
+
+.news-carousel .item span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.4);
+	color: #fff;
+	padding-left: 20px;
+	height: 30px;
+	line-height: 30px;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.news-carousel .owl-pagination {
+	width: 100px !important;
+	position: absolute;
+	right: 0;
+	bottom: 7px;
+}
+
+.news-carousel .owl-pagination .owl-page span {
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 5px 7px;
+	border-radius: 100%;
+	background: #ccc;
+	overflow: hidden;
+}
+
+.news-carousel .owl-pagination .owl-page.active span,
+.news-carousel .owl-pagination .owl-page:hover span {
+	background: #FF6633;
+}
+
+
+/* 首页文章分列 列表*/
+
+.index-news-content {
+	width: 400px;
+	height: 292px;
+	box-sizing: border-box;
+	border: solid 1px #EFEFEF;
+	float: right;
+	background: #fff;
+	margin-right: 10px;
+}
+
+.index-news-type {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.index-news-type ul li {
+	float: left;
+	width: 25%;
+	text-align: center;
+	height: 36px;
+	line-height: 34px;
+	background: #FAFAFA;
+	color: #666;
+	border-left: solid 1px #F1F1F1;
+	border-top: solid 2px transparent;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.index-news-type ul li:first-child {
+	border-left: none;
+}
+
+.index-news-type ul li.active {
+	background: #fff;
+	color: #333;
+	border-top: solid 2px #2B91E3;
+}
+
+.index-news-box {
+	padding: 0 10px;
+	display: none;
+}
+
+.index-news-box.active {
+	display: block;
+}
+
+.index-news-item {
+	height: 38px;
+	line-height: 38px;
+	border-bottom: dashed 1px #F2F2F2;
+}
+
+.index-news-item:first-child .index-news-item-title {
+	color: #ff6633;
+}
+
+.index-news-item:nth-child(2) .index-news-item-title {
+	color: #66008c;
+}
+
+.index-news-item:nth-child(3) .index-news-item-title {
+	color: #006666;
+}
+
+.index-news-item:nth-child(4) .index-news-item-title {
+	color: #cc0033;
+}
+
+.index-news-item:nth-child(5) .index-news-item-title {
+	color: #6600cc;
+}
+
+.index-news-item:last-child {
+	border-bottom: dashed 1px transparent;
+}
+
+.index-news-item:last-child .index-news-item-title {
+	color: #330000;
+}
+
+.index-news-item img {
+	float: left;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.index-news-item-title {
+	display: block;
+	float: left;
+	width: 80%;
+	padding-left: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.index-news-item-time {
+	float: right;
+	font-size: 12px;
+	color: #999;
+}
+
+
+/*快捷导航*/
+
+.quick-navigation {
+	width: 100%;
+	height: 292px;
+	box-sizing: border-box;
+	border: solid 1px #EFEFEF;
+	background: #fff;
+}
+
+.quick-navigation ul {
+	height: 108px;
+	overflow: hidden;
+}
+
+.quick-navigation ul li {
+	width: 50%;
+	float: left;
+	height: 36px;
+	line-height: 36px;
+	box-sizing: border-box;
+	border-bottom: solid 1px #F1F1F1;
+	border-right: solid 1px #F1F1F1;
+	padding-left: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.quick-navigation ul li a {
+	margin-left: 10px;
+}
+
+.quick-navigation ul li a:hover {
+	color: #2b91e3;
+}
+
+.quick-navigation-title {
+	height: 36px;
+	line-height: 36px;
+	border-bottom: solid 1px #F1F1F1;
+	font-size: 16px;
+	padding-left: 15px;
+	box-sizing: border-box;
+}
+
+.quick-navigation-img {
+	text-align: center;
+	height: 146px;
+	line-height: 143px;
+}
+
+.quick-navigation-img img {
+	width: 280px;
+	height: 126px;
+}
+
+
+/*免费软件 标题*/
+
+.soft-title {
+	font-size:18px;
+	height:24px
+	line-height:24px;
+	margin:20px  0  12px;
+}
+
+.soft-title.free-soft-title {
+	color: #f8944a;
+}
+
+.soft-title.free-tool-title {
+	color: #2B91E3;
+}
+
+.soft-title.lottery-soft-title {
+	color: #f8944a;
+}
+
+.soft-title span {
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	margin-right: 15px;
+	width: 20px;
+	height: 20px;
+	background-image: url("../images/soft.png");
+}
+
+.soft-title span.free-tool-img {
+	background-position: 0 43px;
+}
+
+.soft-title span.lottery-soft-img {
+	height: 23px;
+	background-position: 0 23px;
+}
+
+.soft-content {
+	overflow: hidden;
+	margin-left: -10px;
+	padding: 10px 10px 10px 0;
+}
+
+.soft-item {
+	background: #fff;
+	box-sizing: border-box;
+	padding: 10px;
+	overflow: hidden;
+	margin: 0 0 10px 10px;
+	border: solid 1px #EFEFEF;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0);
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.soft-item:hover {
+	-webkit-transform: translate3d(0,-5px,0);
+	transform: translate3d(0,-5px,0);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.soft-item-top {
+	overflow: hidden;
+}
+
+.soft-item-img {
+	width: 100px;
+	text-align: center;
+	height: 90px;
+	line-height: 90px;
+	float: left;
+}
+
+.soft-item-img img {
+	width: 90px;
+	height: 68px;
+}
+.soft-item-text{
+	display:inline-block;
+	height:90px;
+	width:160px;
+	float:right;
+}
+.soft-item-title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-top: 5px;
+}
+
+.soft-item-downNum {
+	font-size: 12px;
+	color: #878787;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin: 5px 0;
+}
+
+.soft-item-download {
+	display: inline-block;
+	width: 80px;
+	text-align: center;
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	color: #666;
+	position: relative;
+	z-index: 1;
+	background: #efefef;
+}
+
+.soft-item:hover .soft-item-download {
+	color: #fff;
+}
+
+.soft-item-download::before {
+	content: "";
+	width: 100%;
+	background: #FF9000;
+	height: 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transition: 0.3s all;
+	z-index: -1;
+}
+
+.soft-item:hover .soft-item-download::before {
+	height: 100%;
+}
+
+
+/*.soft-item-download:hover {
+	background: #F8944A;
+	color: #fff;
+}*/
+
+.soft-item-brief {
+	height: 66px;
+	line-height: 22px;
+	box-sizing: border-box;
+	padding-top: 7px;
+	margin-top: 7px;
+	border-top: solid 1px #F3F3F3;
+	font-size: 12px;
+	color: #777;
+}
+
+
+/*彩票APP*/
+
+.lottery-app {
+	background: #fff;
+	overflow: hidden;
+	border: solid 1px #EFEFEF;
+}
+
+.lottery-app-type ul {
+	height: 36px;
+	line-height: 36px;
+}
+
+.lottery-app-type ul li {
+	float: left;
+	width: 50%;
+	text-align: center;
+	border-bottom: solid 2px #F3F3F3;
+	cursor: pointer;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.lottery-app-type ul li.active,
+.lottery-app-type ul li:hover {
+	color: #F8944B;
+	border-bottom: solid 2px #F8944B;
+}
+
+.lottery-app-content {
+	display: none;
+}
+
+.lottery-app-content.active {
+	display: block;
+}
+
+.lottery-app-item {
+	display: block;
+	width: 16.666%;
+	float: left;
+	text-align: center;
+	padding: 30px 0 15px;
+}
+
+.lottery-app-item:hover {
+	color: #2B91E3;
+}
+
+.lottery-app-logo {
+	margin-bottom: 15px;
+}
+
+.lottery-app-logo img {
+	width: 80px;
+	height: 80px;
+	border-radius: 20px;
+}
+
+.lottery-app-brief {
+	padding: 0 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.index-info {
+	overflow: hidden;
+	background: #fff;
+	margin-top: 30px;
+	padding: 15px 10px 5px;
+	border: solid 1px #EFEFEF;
+}
+
+.index-info-item {
+	width: 33.333%;
+	float: left;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+
+.index-info-item ul li {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-bottom: 5px;
+}
+
+.index-info-item ul li i {
+	font-size: 16px;
+	color: #999;
+}
+
+.index-info-item ul li:first-child i {
+	color: #ff3333;
+}
+
+.index-info-item ul li:nth-child(2) i {
+	color: #ff8700;
+}
+
+.index-info-item ul li:nth-child(3) i {
+	color: #ff8757;
+}
+
+.index-info-item ul li a {
+	color: #666;
+	margin: 0 5px;
+}
+
+.index-info-item ul li a:hover {
+	color: #2B91E3;
+}
+
+.index-info-title {
+	font-size: 18px;
+	color: #2b91e3;
+	margin-bottom: 10px;
+}
+
+
+/*首页的底部 网站地图/友情链接 */
+
+.index-footer {
+	margin-top: 30px;
+	background: #fff;
+	padding: 15px 0 0 0;
+	margin-bottom: -50px;
+	border-top: solid 1px #EFEFEF;
+}
+
+.index-footer-links {
+	overflow: hidden;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.index-footer-links span {
+	display: block;
+	width: 80px;
+	float: left;
+	color: #999;
+}
+
+.index-footer-links ul {
+	display: block;
+	width: 1120px;
+	float: left;
+}
+
+.index-footer-links ul li {
+	float: left;
+	margin: 0 15px 5px 0;
+}
+
+.index-footer-links ul li a {
+	color: #999;
+}
+
+.index-footer-links ul li a:hover {
+	color: #2B91E3;
+}
+
+
+/*404界面------------------------------------------------------------*/
+
+.error-page-left {
+	margin-top: 50%;
+	text-align: center;
+}
+
+.error-page-right {
+	text-align: left;
+	margin-left: 10%;
+	margin-top: 20%;
+}
+
+.error-back {
+	margin: 20px 0;
+}
+
+.error-back a {
+	color: #007AB7;
+	font-size: 16px;
+}
+
+.back-prev {
+	margin-left: 20px;
+}
+
+.error-page-right p {
+	font-size: 16px;
+}
+
+.error-page-right ul li {
+	list-style: disc;
+	margin: 5px 20px;
+}
+
+body {
+	background: #F5F5F5;
+}
+
+
+/*联系我们*/
+
+
+/*头部上小提示*/
+
+.tip {
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	color:#999;
+}
+
+.tip ul li {
+	float: left;
+	margin-left: 20px;
+	cursor: pointer;
+	color: #999;
+}
+
+.tip ul li:hover {
+	color: #2B91E3;
+}
+
+
+/*头部-------------------------------------------------*/
+
+.header {
+	background: url(../images/header-backImg.png);
+	height: 102px;
+	line-height: 102px;
+}
+
+.header-left {
+	height: 102px;
+}
+
+.header-left span {
+	margin-left: 20px;
+	color: #888;
+	font-size: 20px;
+}
+
+.header-right {
+	text-align: right;
+	font-size: 12px;
+}
+
+.hot-serch {
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.hot-serch li {
+	display: inline-block;
+	margin-left: 5px;
+	color: #AAB0B4;
+}
+
+.hot-serch a {
+	color: #AAB0B4;
+}
+
+.hot-serch a:hover {
+	color: #2B91E3;
+}
+
+.serch-box {
+	width: 260px;
+	height: 32px;
+	display: inline-block;
+	position: relative;
+}
+
+.serch-box input {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	text-indent: 10px;
+}
+
+.serch-box img {
+	position: absolute;
+	top: 4px;
+	right: 6px;
+	cursor: pointer;
+}
+
+
+/*导航栏----------------------------------------*/
+
+.nav {
+	height: 42px;
+	background: #2B91E3;
+	line-height: 42px;
+}
+
+.nav-ul li {
+	float: left;
+}
+
+.nav-ul li a {
+	display: block;
+	font-size: 15px;
+	padding: 0 30px;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+.nav-ul li a::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 0;
+	background: #1666A7;
+	z-index: -1;
+	transition: 0.3s ease-in-out;
+}
+
+.nav-ul li a.active::before,
+.nav-ul li a:hover::before {
+	height: 100%;
+}
+
+.nav-ul li .app {
+	position: relative;
+}
+
+.nav-ul li .app img {
+	position: absolute;
+	top: -10px;
+	right: 0;
+	z-index: 1;
+}
+
+
+/*页脚--------------------------------------------------------*/
+
+.footer {
+	padding: 15px 0 5px;
+	width: 100%;
+	background: #272830;
+	margin-top: 50px;
+	font-size: 12px;
+	text-align: center;
+	color: #797A88;
+}
+
+.footer-nav {
+	text-align: center;
+}
+
+.footer-nav ul {
+	display: inline-block;
+}
+
+.footer-nav ul li {
+	float: left;
+	margin-left: 20px;
+}
+
+.footer-nav ul li a {
+	color: #797A88;
+	position: relative;
+}
+
+.footer-nav ul li a:hover {
+	color: #2B91E3;
+}
+
+.footer-nav ul li a::after {
+	content: "";
+	height: 12px;
+	width: 2px;
+	top: 3px;
+	right: -10px;
+	background: #6D6E7B;
+	position: absolute;
+}
+
+.footer-nav ul li:last-child a::after {
+	width: 0;
+}
+
+
+/*面包屑显示----------------------------------------------------------*/
+
+.grad {
+	line-height: 30px;
+	font-size: 12px;
+	color: #999;
+}
+
+.grad a {
+	color: #999;
+}
+
+.grad a:hover {
+	color: #2B91E3;
+}
+
+.page-middle {
+	height: -webkit-calc(100vh - 284px);
+	height: calc(100vh - 284px);
+}
+
+
+/*了解捷彩-----------------------------------------------------------------*/
+
+
+/*了解捷彩共有主体部分样式*/
+
+
+/*主体左部分*/
+
+.know-jiecai-left,
+.know-jiecai-right {
+	background: #fff;
+	border: 1px solid #efefef;
+	box-sizing: border-box;
+}
+
+.know-jiecai-left {
+	width: 250px;
+	float: left;
+}
+
+
+/*主体右部分*/
+
+.know-jiecai-right {
+	float: right;
+	width: 940px;
+}
+
+.know-jiecai-left-title {
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+}
+
+.know-jiecai-left-title span {
+	font-size: 18px;
+	font-weight: 700;
+	position: relative;
+}
+
+.know-jiecai-left-title span::before,
+.know-jiecai-left-title span::after {
+	content: "";
+	position: absolute;
+	top: 13px;
+	width: 44px;
+	height: 1px;
+	background: #999;
+}
+
+.know-jiecai-left-title span::before {
+	left: -53px;
+}
+
+.know-jiecai-left-title span::after {
+	right: -53px;
+}
+
+.know-jiecai-nav li {
+	text-align: center;
+}
+
+.know-jiecai-nav li a {
+	display: block;
+	height: 45px;
+	line-height: 45px;
+	color: #999;
+	position: relative;
+	z-index: 1;
+}
+
+.know-jiecai-nav li a::before,
+.know-jiecai-nav li a::after {
+	content: "";
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.know-jiecai-nav li a::before {
+	width: 0;
+	background: #F9F9F9;
+	z-index: -1;
+	transition: 0.3s all;
+}
+
+.know-jiecai-nav li a::after {
+	width: 2px;
+	background: #2B91E3;
+	opacity: 0;
+	-webkit-transition: 1s all;
+	transition: 1s all;
+}
+
+.know-jiecai-nav li a:hover::before,
+.know-jiecai-nav li a.active::before {
+	width: 100%;
+}
+
+.know-jiecai-nav li a:hover::after,
+.know-jiecai-nav li a.active::after {
+	opacity: 1;
+}
+
+
+/* 了解捷彩-关于我们   主体右侧内容*/
+
+.list-2-1 {
+	margin: 0 50px;
+}
+
+.list-2-1 h3 {
+	font-size: 18px;
+	font-weight: 700;
+	margin-top: 45px;
+}
+
+.list-2-1 p {
+	line-height: 30px;
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+
+/*了解捷彩-联系方式  主体右侧内容*/
+
+.list-3-1 {
+	margin: 50px;
+	/*display: none;*/
+}
+
+.list-3-1 .contact-way {
+	margin: 50px 0;
+}
+
+
+/*热门链接*/
+
+.hot-link li {
+	height: 36px;
+	position: relative;
+}
+
+.hot-link li::before {
+	content: "·";
+	color: #999;
+	font-size: 36px;
+	text-align: center;
+	line-height: 36px;
+	top: -1px;
+	left: -12px;
+	position: absolute;
+}
+
+.hot-link li a {
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	width: 70%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.hot-link li a:hover {
+	color: #2B91E3;
+}
+
+.hot-link li span {
+	height: 36px;
+	line-height: 36px;
+	font-size: 12px;
+	float: right;
+	color: #999;
+}
+
+
+/*了解捷彩-免责申明  主体右侧内容*/
+
+.list-4-1 {
+	width: 794px;
+}
+
+.list-4-1 ul li {
+	list-style: disc;
+	margin: 50px;
+}
+
+.list-4-1 ul li p {
+	line-height: 30px;
+	font-size: 16px;
+}
+
+
+/*了解捷彩-网站地图  主体右侧内容*/
+
+.list-5-1 {
+	margin: 50px;
+}
+
+.list-5-1 .panel {
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+
+.list-5-1 .panel ul li {
+	float: left;
+	margin-bottom: 10px;
+}
+
+.list-5-1 .panel ul li a {
+	color: #808080;
+	font-size: 14px;
+	margin-right: 30px;
+	position: relative;
+}
+
+.panel-left {
+	height: 30px;
+	padding-right: 5px;
+	float: left;
+}
+
+.panel-left a {
+	color: #FF9A00;
+}
+
+.panel-right {
+	float: left;
+	width: 700px;
+}
+
+.list-5-1 .panel ul li a::after {
+	content: "";
+	height: 14px;
+	width: 2px;
+	background: #e2e2e2;
+	position: absolute;
+	top: 3px;
+	right: -15px;
+}
+
+.list-5-1 .panel ul li:last-child a::after {
+	width: 0;
+}
+
+.list-5-1 .panel ul li a:hover {
+	color: #2B91E3;
+}
+
+
+/*以下为多页面公用部分--------------------------------------------------*/
+
+
+/*各页面的共有板块属性*/
+
+.serch-result-left,
+.serch-result-right {
+	background: #fff;
+	border: 1px solid #efefef;
+}
+
+.serch-result-left {
+	margin-right: 20px;
+}
+
+.serch-result-right {
+	padding:0  10px  18px;
+}
+
+.title {
+	padding: 20px 0 15px;
+	font-size: 16px;
+	line-height: 20px;
+	height: 20px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.title-logo {
+	margin-right: 15px;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	width: 16px;
+	height: 16px;
+	background-image: url(../images/serch-logo.png);
+}
+
+
+/* 你是不是在找    &&  大家喜欢搜 */
+
+.find-link {
+	padding: 10px 0;
+}
+
+.find-link ul {
+	overflow: hidden;
+}
+
+.find-link ul li {
+	float: left;
+}
+
+.find-link a {
+	display: block;
+	color: #999;
+	padding: 3px 10px;
+}
+
+.find-link a:hover {
+	color: #fff;
+	background: #2b91e3;
+}
+
+.find-title-logo {
+	background-position: 0 0;
+}
+
+.serch-title-logo {
+	background-position: 0 -16px;
+}
+
+
+/*下载排行榜*/
+
+.leaderboard-title-logo {
+	background-position: 0 -32px;
+}
+
+.leaderboard-link {
+	padding: 0 5px;
+}
+
+.leaderboard-link-item {
+	padding: 10px 0;
+	border-bottom: 1px dashed #E2E2E2;
+	height: 40px;
+	box-sizing: border-box;
+	position: relative;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	cursor: pointer;
+}
+
+.leaderboard-link-item:last-child {
+	border-bottom: none;
+}
+
+.link-item-li {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 0;
+	height: 20px;
+	line-height: 20px;
+	width: 20px;
+	text-align: center;
+	border-radius: 3px;
+	background: #999;
+	color: #fff;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+
+/*下载排行榜链接项前三条的颜色*/
+
+.link-item-li-one {
+	background: #FF5400;
+}
+
+.link-item-li-three {
+	background: #FF9000;
+}
+
+.link-item-li-two {
+	background: #FFBD00;
+}
+
+.link-item-show {
+	display: inline-block;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 40px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	opacity: 1;
+	-webkit-transition: all 0.24s;
+	transition: all 0.24s;
+}
+
+.link-item-hide {
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+	left: 30px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	opacity: 0;
+	-webkit-transition: all 0.24s;
+	transition: all 0.24s;
+}
+
+.link-item-img {
+	float: left;
+	width: 90px;
+	height: 68px;
+}
+
+.link-item-download {
+	padding-left: 10px;
+	width: 140px;
+	box-sizing: border-box;
+	float: right;
+}
+
+.download-title {
+	font-size: 14px;
+	width: 140px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.download-time {
+	font-size: 12px;
+	color: #999;
+}
+
+.link-item-hide .download-btn {
+	display: block;
+	background: #F9F7F7;
+	width: 80px;
+	height: 24px;
+	line-height: 24px;
+	margin-top: 5px;
+	text-align: center;
+	font-size: 12px;
+	cursor: pointer;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.link-item-hide .download-btn:hover {
+	background: #F8944A;
+}
+
+.link-item-hide .download-btn:hover a {
+	color: #fff;
+}
+
+.leaderboard-link-item:hover,
+.leaderboard-link-item.active {
+	height: 90px;
+}
+
+.leaderboard-link-item:hover .link-item-show,
+.leaderboard-link-item.active .link-item-show {
+	height: 0;
+	opacity: 0;
+}
+
+.leaderboard-link-item:hover .link-item-hide,
+.leaderboard-link-item.active .link-item-hide {
+	height: 70px;
+	opacity: 1;
+}
+
+.leaderboard-link-item:hover .link-item-li,
+.leaderboard-link-item.active .link-item-li {
+	height: 68px;
+	line-height: 68px;
+}
+
+
+/*捷彩百科*/
+
+.Baike-title-logo {
+	background-position: 0 -48px;
+}
+
+.Baike-link {
+	overflow: hidden;
+}
+
+.Baike-link ul li {
+	float: left;
+	height: 100px;
+	width: 33.3%;
+	text-align: center;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.Baike-link ul li span {
+	display: inline-block;
+	width: 53px;
+	height: 53px;
+	background-image: url(../images/Baike-logo.png);
+}
+
+.Baike-link ul li p {
+	display: block;
+}
+
+.Baike-link ul li a:hover {
+	color: #2B91E3;
+}
+
+.Bike-link-item1 {
+	background-position: 0 0;
+}
+
+.Bike-link-item2 {
+	background-position: 0 -53px;
+}
+
+.Bike-link-item3 {
+	background-position: 0 -106px;
+}
+
+.Bike-link-item4 {
+	background-position: 0 -159px;
+}
+
+.Bike-link-item5 {
+	background-position: 0 -212px;
+}
+
+.Bike-link-item6 {
+	background-position: 0 -265px;
+}
+
+.Baike-play-link {
+	margin-bottom: 30px;
+}
+
+.Baike-play-link ul {
+	margin-left: 20px;
+}
+
+.Baike-play-link ul li {
+	margin-bottom: 10px;
+	height: 24px;
+	width: 250px;
+	line-height: 24px;
+	position: relative;
+}
+
+.Baike-play-link ul li::before {
+	content: "·";
+	font-size: 20px;
+	left: -12px;
+	top: -1px;
+	color: #999;
+	position: absolute;
+}
+
+.Baike-play-link ul li a {
+	color: #666;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.Baike-play-link ul li a:hover {
+	color: #2B91E3;
+}
+
+
+/*搜索结果----------------------------------------------------*/
+
+
+/*搜索结果-列表  主体左边*/
+
+.serch-result-left .serch-result-no {
+	text-align: center;
+}
+
+.serch-result-no img {
+	margin-top: 84px;
+	margin-bottom: 35px;
+}
+
+.sorry {
+	color: #000;
+	font-size: 24px;
+	margin-right: 10px;
+}
+
+.serch-key-code {
+	color: #FF9A00;
+}
+
+
+/*软件计划界面------------------------------------------------------*/
+
+
+/*分类*/
+
+.tag-panel {
+	padding: 30px 0 10px;
+	display: inline-block;
+	margin: 0 4px;
+}
+
+.tag-title {
+	display: inline-block;
+	box-sizing: border-box;
+	text-align: right;
+	width: 70px;
+	padding-right: 10px;
+	line-height: 40px;
+}
+
+.tag {
+	width: 800px;
+	float: right;
+}
+
+.tag ul li {
+	margin: 0 10px 10px 0;
+	float: left;
+}
+
+.tag ul li a {
+	display: block;
+	padding: 5px 20px;
+	background: #FAFAFA;
+	border: 1px solid #f2f2f2;
+}
+
+.tag ul li a:hover,
+.tag ul li a.active {
+	color: #fff;
+	background: #F8944A;
+}
+
+
+/*查看条件*/
+
+.serch-condition {
+	overflow: hidden;
+	padding: 0 10px 0 10px;
+	border-bottom: 1px solid #F4F4F4;
+}
+
+.serch-condition a {
+	float: left;
+	padding: 0 20px 10px 20px;
+	border-bottom: 2px solid transparent;
+}
+
+.serch-condition a:hover,
+.serch-condition a.active {
+	color: #FF9000;
+	border-bottom: 2px solid #FF9000;
+}
+
+.serch-condition .serch-condition-result {
+	float: right;
+}
+
+.product-number {
+	color: #FF9000;
+	margin: 0 5px;
+}
+
+
+/*产品列表*/
+
+.product-list-item {
+	overflow: hidden;
+	padding: 28px 20px 28px 40px;
+	border-top: 1px solid #F4F4F4;
+	-webkit-transition: all 0.6s;
+	transition: all 0.6s;
+}
+
+.product-list-item:first-child {
+	border: none;
+}
+
+.product-list-item:hover,
+.product-list-item-click {
+	background: #F8FCFF;
+}
+
+.product-list-item span {
+	float: left;
+	margin-right: 20px;
+}
+
+
+/*规定产品图片大小 114x66 */
+
+.product-list-item span img {
+	width: 114px;
+	height: 66px;
+	padding: 0;
+	margin: 0;
+}
+
+
+/*产品介绍*/
+
+.product-presentation {
+	float: left;
+	width: 550px;
+}
+
+.product-presentation span,
+.product-grade,
+.authorization-way,
+.product-size,
+.update-time {
+	color: #999;
+	margin-right: 0;
+}
+
+.product-grade {
+	line-height: 14px;
+}
+
+.product-grade ul li {
+	float: left;
+	margin-right: 5px;
+}
+
+.product-presentation div {
+	font-size: 13px;
+	float: left;
+	margin: 0 4px;
+}
+
+.product-name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 16px;
+	line-height: 16px;
+	color: #000;
+}
+
+.product-description {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 14px;
+	color: #999;
+	margin: 10px 0;
+}
+
+.product-downloads {
+	float: right;
+}
+
+.product-downloads p {
+	color: #999;
+	text-align: center;
+	font-size: 13px;
+}
+
+.product-list-item .product-downloads span {
+	margin: 10px 0 0 0;
+}
+
+.product-downloads span a {
+	display: block;
+	background: #F9F7F7;
+	width: 120px;
+	line-height: 32px;
+	text-align: center;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.product-downloads span a:hover {
+	background: #FF9000;
+	color: #fff;
+}
+
+
+/*玩法技巧------------------------------------------------------------------*/
+
+.play-trick-page-top,
+.play-trick-page-bottom {
+	width: 100%;
+	padding-top: 20px;
+	background: #fff;
+	overflow: hidden;
+}
+
+.play-trick-page-bottom {
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.trick-page-top-item {
+	margin: 0 0 20px 20px;
+}
+
+.trick-page-top-item a {
+	position: relative;
+}
+
+.trick-page-top-item a:hover p {
+	color: #2B91E3;
+}
+
+
+/*左边固定宽高 580*340*/
+
+.trick-page-top-left .trick-page-top-item {
+	width: 580px;
+	height: 340px;
+	line-height: 340px;
+}
+
+.trick-page-top-left .trick-page-top-item img {
+	width: 580px;
+	height: 340px;
+}
+
+
+/*中间固定宽高 280*160*/
+
+.trick-page-top-middle .trick-page-top-item {
+	width: 280px;
+	height: 160px;
+}
+
+.trick-page-top-middle .trick-page-top-item img {
+	width: 280px;
+	height: 160px;
+}
+
+
+/*右边固定宽高 260*340*/
+
+.trick-page-top-right .trick-page-top-item {
+	width: 260px;
+	height: 340px;
+}
+
+.trick-page-top-right .trick-page-top-item img {
+	width: 260px;
+	height: 340px;
+}
+
+.trick-link-title {
+	height: 38px;
+	box-sizing: border-box;
+	line-height: 38px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #ddd;
+	padding-left: 10px;
+	background: rgba(0, 0, 0, 0.4);
+	position: absolute;
+	width: 100%;
+	transition: all 0.3s ease-in-out;
+}
+
+.trick-page-top-left .trick-link-title,
+.trick-page-top-right .trick-link-title {
+	top: 143px;
+}
+
+.trick-page-top-middle .trick-link-title {
+	top: 53px;
+}
+
+.latest-article-panel {
+	margin-right: 26px;
+}
+
+.play-trick-page-bottom .latest-article {
+	padding-bottom: 16px;
+	margin-bottom: 20px;
+	font-weight: 500;
+	font-size: 14px;
+	border-bottom: 1px solid #FF9000;
+	color: #FF9000;
+}
+
+.play-trick-page-bottom .latest-article a {
+	font-size: 14px;
+}
+
+.latest-article a {
+	float: right;
+	color: #999;
+}
+
+.latest-article a:hover {
+	color: #2B91E3;
+}
+
+.latest-article-item {
+	margin-bottom: 20px;
+	height: 70px;
+}
+
+.latest-article-img {
+	height: 70px;
+	width: 106px;
+}
+
+.latest-article-content {
+	display: inline-block;
+	width: 240px;
+	float: right;
+}
+
+.latest-article-content .trick-title {
+	text-align: left;
+	color: #000;
+	border: none;
+	padding-bottom: 8px;
+	height: 42px;
+	line-height: 22px;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s ease-in-out;
+}
+
+.latest-article-item a:hover .trick-title {
+	color: #2B91E3;
+}
+
+.latest-article-content .trick-update-time {
+	text-align: right;
+	color: #FF9000;
+	float: right;
+	line-height: 15px;
+	font-size: 12px;
+}
+
+.latest-article-content .trick-update-time img {
+	margin-right: 5px;
+}
+
+.trick-page-bottom-right {
+	margin-left: -20px;
+}
+
+.lottery-data-item {
+	margin: 0 0 40px 20px;
+}
+
+.lottery-data-item .latest-article {
+	color: #2B91E3;
+	border-bottom: 1px solid #2B91E3;
+}
+
+.lottery-data-item .lottery-data-content {
+	display: inline-block;
+	height: 110px;
+	color: #666;
+}
+.lottery-data-content-box{
+  width: 204px;
+  margin-left: 12px;
+  float: right;
+}
+
+.lottery-data-item  .lottery-data-content  p{
+overflow:  hidden;
+text-overflow:  ellipsis;
+transition:  0.3s  all  ease-in-out;
+}
+
+.lottery-data-item  .lottery-data-content  .lottery-data-content-title{
+display:  block;
+height:  20px;
+line-height:  20px;
+white-space:  nowrap;
+margin:  0;
+
+}
+.lottery-data-item  .lottery-data-content  .lottery-data-content-text  {
+margin-top:  10px;
+height:  80px;
+line-height:  20px;
+font-size:  12px;
+}
+
+
+.lottery-data-item .lottery-data-content img {
+	height: 110px;
+	width: 152px;
+}
+
+.lottery-data-item .lottery-data-content:hover p {
+	color: #2B91E3;
+}
+
+.lottery-data-item .play-tricks-item {
+	margin: 20px 0 0 0;
+}
+
+.lottery-data-item .play-tricks-item li {
+	line-height: 14px;
+	height: 14px;
+	margin-bottom: 20px;
+}
+
+.lottery-data-item .play-tricks-item li:before {
+	top: -12px;
+	left: -10px;
+}
+
+.lottery-data-item .play-tricks-item a {
+	width: 280px;
+	display: inline-block;
+	float: none;
+	color: #999;
+}
+
+.lottery-data-item .play-tricks-item span {
+	font-size: 12px;
+}
+
+.lottery-advertising {
+	margin-bottom: -50px;
+}
+
+
+/*玩法技巧02----------------------------------------------------------------*/
+
+.play-tricks {
+	padding: 26px 0 0;
+	margin: 0 20px;
+	border-top: 1px solid #f0f0f0;
+}
+
+.play-tricks-item {
+	margin-bottom: 20px;
+}
+
+.play-tricks-item li,
+.similar-other-trick li {
+	height: 36px;
+	line-height: 36px;
+	margin-left: 6px;
+	position: relative;
+}
+
+.play-tricks-item li:before,
+.similar-other-trick li:before {
+	content: "·";
+	color: #999;
+	font-size: 24px;
+	line-height: 36px;
+	left: -12px;
+	text-align: center;
+	position: absolute;
+}
+
+.play-tricks-item a,
+.similar-other-trick a {
+	float: left;
+	width: 600px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.play-tricks-item a:hover,
+.similar-other-trick a:hover {
+	color: #2B91E3;
+}
+
+.play-tricks-item span,
+.similar-other-trick span {
+	color: #999;
+	float: right;
+}
+
+
+/*玩法分页-----  所有“点击切换”功能未实现，请动态添加----*/
+
+.play-paging {
+	padding: 20px 0;
+	text-align: center;
+	overflow: hidden;
+	border-top: 1px solid #f4f4f4;
+}
+
+.play-paging ul {
+	text-align: center;
+}
+
+.play-paging li {
+	display: inline-block;
+	margin-right: 3px;
+}
+
+.play-paging li a {
+	display: block;
+	padding: 8px 14px;
+	background: #efefef;
+}
+
+.play-paging li a.active,
+.play-paging li a:hover {
+	color: #fff;
+	background: #2B91E3;
+}
+
+
+/*上一页已设置  “不可点击” 样式，功能未实现----请动态设置*/
+
+.play-paging li a.prev-page {
+	cursor: not-allowed;
+	background: #f0f0f0;
+	color: #333;
+}
+
+
+/*玩法技巧-内页*/
+
+.play-trick-content {
+	padding: 0 22px;
+}
+
+.trick-title {
+	text-align: center;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.trick-title p {
+	font-size: 28px;
+	margin: 35px 0 20px;
+	color: #000;
+}
+
+.trick-inform {
+	width: 100%;
+	color: #999;
+	display: inline-block;
+}
+
+.trick-inform div {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.trick-text {
+	border-bottom: 1px solid #f0f0f0;
+	padding: 15px 0;
+}
+
+.other-trick {
+	padding: 20px 0 10px 20px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.other-trick ul li {
+	line-height: 14px;
+	height: 14px;
+	margin-bottom: 10px;
+}
+
+.other-trick span {
+	display: block;
+	float: left;
+	width: 60px;
+}
+
+.other-trick a {
+	width: 700px;
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.other-trick ul li a:hover {
+	color: #2B91E3;
+}
+
+
+/*当后一篇没有了时的 链接样式*/
+
+.other-trick ul li .trick-over:hover {
+	cursor: default;
+	color: #000;
+}
+
+.similar-other-trick p {
+	font-size: 20px;
+	color: #000;
+	margin: 26px 0 10px;
+}
+
+
+/*下载页 -------------------------------------*/
+
+.serch-result-top {
+	box-sizing: border-box;
+	height: 350px;
+	background: #fff;
+	margin-bottom: 20px;
+	padding: 62px 34px 0px;
+	border: 1px solid #EFEFEF;
+}
+
+.download-product-img {
+	width: 260px;
+	float: left;
+	text-align: center;
+}
+
+
+/*规定下载页 产品图片大小 260x195  */
+
+.download-product-img .product-img {
+	width: 260px;
+	height: 195px;
+}
+
+.download-product-img ul {
+	display: inline-block;
+}
+
+.download-product-img li {
+	float: left;
+	margin: 26px 5px;
+	padding: 0 12px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #EFEFEF;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.download-product-img .praise-num,
+.download-product-img .blame-num {
+	color: #999;
+	margin-left: 4px;
+}
+
+.download-product {
+	float: left;
+	margin-left: 26px;
+	width: 500px;
+	display: block;
+}
+
+.download-product .product-name {
+	font-size: 30px;
+	height: 30px;
+	line-height: 30px;
+	color: #000;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.download-product span {
+	width: 50%;
+	color: #666;
+	float: left;
+	margin: 5px 0;
+}
+
+.download-product span div {
+	display: inline-block;
+}
+
+.now-download,
+.android-download {
+	display: inline-block;
+	width: 160px;
+	height: 42px;
+	line-height: 42px;
+	font-size: 16px;
+	margin-right: 10px;
+	color: #fff;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.now-download {
+	background: #FF9600;
+}
+
+.android-download {
+	background: #5FC700;
+}
+
+.now-download:hover {
+	background: #FF6F00;
+}
+
+.android-download:hover {
+	background: #52A50A;
+}
+
+.download-product .download-btn img,
+.download-address .download-btn img {
+	margin-right: 12px;
+	height: 16px;
+}
+
+.two-dimension-code {
+	display: block;
+	padding: 18px 18px 0px;
+	float: right;
+	background: #EAEAEA;
+}
+
+.two-dimension-code img {
+	height: 162px;
+	width: 162px;
+}
+
+.two-dimension-code p {
+	margin: 14px 0;
+	text-align: center;
+	color: #999;
+}
+
+.product-details {
+	margin: 10px 0;
+}
+
+.product-details a:hover,
+.product-details a.active {
+	color: #2B91E3;
+	border-bottom: 2px solid #2B91E3;
+}
+
+.details-description {
+	margin: 0 20px;
+	overflow: hidden;
+}
+
+#play-introduction,
+#product-screenshot,
+#download-address,
+#similar-product {
+	padding: 10px 0;
+	margin: 10px 0;
+	border-bottom: 1px solid #EAEAEA;
+}
+
+.product-screenshot {
+	display: inline-block;
+	margin: 0 auto;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 0 15px;
+}
+
+.product-screenshot .owl-buttons .owl-next,
+.product-screenshot .owl-buttons .owl-prev {
+	width: 30px;
+	height: 380px;
+	position: absolute;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+	/*-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);*/
+}
+
+.product-screenshot .owl-buttons .owl-prev {
+	background-image: url("../images/infor-prev.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	left: 0;
+}
+
+.product-screenshot .owl-buttons .owl-next {
+	background-image: url("../images/infor-next.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	right: 1px;
+}
+
+.product-screenshot .owl-pagination {
+	display: none;
+}
+
+.serch-result-left .screenshot-item {
+	margin: 0 15px;
+}
+
+.serch-result-left .screenshot-item img {
+	margin: 0;
+	height: 380px;
+}
+
+#download-address span {
+	float: right;
+}
+
+#download-address span a {
+	color: #2B91E3;
+}
+
+.download-address {
+	padding: 10px 30px 30px 0px;
+}
+
+.more-download-address,
+.more-download-address ul {
+	overflow: hidden;
+}
+
+.other-download-address,
+.spare-download-address {
+	width: 350px;
+	float: left;
+	margin-right: 50px;
+}
+
+.more-download-address ul li {
+	text-align: center;
+	height: 24px;
+	width: 50%;
+	margin-bottom: 5px;
+	float: left;
+	position: relative;
+}
+
+.more-download-address ul li:hover a {
+	color: #FF9600;
+}
+
+.more-download-address ul li a {
+	color: #0079EB;
+	position: absolute;
+	left: 20px;
+}
+
+.other-download-address ul li span,
+.spare-download-address ul li span {
+	width: 13px;
+	height: 14px;
+	top: 5px;
+	left: 0px;
+	position: absolute;
+	background: url(../images/other-download-address.png);
+}
+
+.other-download-address ul li span {
+	background-position: 0 0;
+}
+
+.spare-download-address ul li span {
+	background-position: 0 -14px;
+}
+
+#other-download-address,
+#spare-download-address {
+	display: block;
+	font-size: 14px;
+	padding: 10px 0;
+	margin: 10px 0;
+	color: #333;
+	border-bottom: 1px solid #EAEAEA;
+}
+
+.similar-product-item {
+	width: 33.3333%;
+	float: left;
+	box-sizing: border-box;
+	padding: 16px 0 16px 20px;
+	transition: all 0.3s ease-in-out;
+}
+
+.similar-product-item .similar-product-img {
+	float: left;
+	margin-right: 20px;
+}
+
+.similar-product-item img {
+	height: 80px;
+	width: 80px;
+	border-radius: 15px;
+}
+
+.similar-product .similar-product-item .product-presentation {
+	width: auto;
+	transition: all 0.3s ease-in-out;
+}
+
+.similar-product .similar-product-item .product-name {
+	font-size: 14px;
+	width: 150px;
+	margin: 20px 0 14px 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	transition: all 0.3s ease-in-out;
+}
+
+.similar-product .similar-product-item .product-size {
+	color: #000;
+	transition: all 0.3s ease-in-out;
+}
+
+.similar-product-item:hover .product-name {
+	color: #2B91E3;
+}
+
+
+/*右侧悬浮框*/
+
+.small-feature-service,
+.small-feature-top,
+.small-feature-phone-box {
+	position: fixed;
+	right: 10px;
+	cursor: pointer;
+}
+
+.small-feature-service {
+	bottom: 172px;
+}
+
+.small-feature-phone-box {
+	bottom: 116px;
+	overflow: hidden;
+}
+
+.small-feature a,
+.small-feature-phone-box {
+	display: block;
+	line-height: 46px;
+	text-align: center;
+	width: 46px;
+	height: 46px;
+	background: #fff;
+	margin-bottom: 10px;
+	box-shadow: 0px 2px 2px #999;
+	-webkit-transition: 0.3s all ease-in-out;
+	transition: 0.3s all ease-in-out;
+}
+
+.small-feature-phone {
+	width: 170px;
+	position: absolute;
+	left: 0;
+	-webkit-transition: 0.4s all;
+	transition: 0.4s all;
+}
+
+.small-feature-phone-img {
+	width: 46px;
+	height: 46px;
+	line-height: 46;
+	position: relative;
+	display: inline-block;
+	-webkit-transition: 0.4s all;
+	transition: 0.4s all;
+}
+
+.small-feature-phone img {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+}
+
+.small-feature-phone span {
+	padding: 5px 0;
+	width: 120px;
+	display: inline-block;
+	height: 46px;
+	float: right;
+	text-align: left;
+	overflow: hidden;
+}
+
+.small-feature-phone span p {
+	line-height: 18px;
+}
+
+.small-feature-phone-box:hover {
+	width: 170px;
+}
+
+.small-feature-phone-box:hover .small-feature-phone {
+	right: 0;
+}
+
+.small-feature a:hover,
+.small-feature div:hover {
+	background: #F1F1F1;
+}
+
+
+/*彩票APP页面*/
+
+.lottery-app-page .tag-panel {
+	background: #fff;
+	width: 100%;
+	margin: 0;
+}
+
+.lottery-app-page .tag-title {
+	float: left;
+}
+
+.lottery-app-page .tag {
+	float: left;
+	width: 1100px;
+}
+
+
+.lottery-app-page-content {
+	margin-top: 20px;
+	margin-left: -20px;
+	height: 600px;
+	/*background: #FF6F00;*/
+}
+
+.app-box-item {
+	background: #fff;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	height: 200px;
+	padding: 0 0 0 20px;
+	overflow: hidden;
+	border: solid 1px #EFEFEF;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.app-box-item:hover {
+	-webkit-transform: translate3d(0,-5px,0);
+	transform: translate3d(0,-5px,0);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.app-box-item-left {
+	display: inline-block;
+	text-align: center;
+	float: left;
+	width: 120px;
+	margin: 24px 12px 0 0;
+}
+
+.lottery-app-img {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	border-radius: 14px;
+}
+
+.app-box-item-left .product-grade {
+	display: inline-block;
+	margin: 10px 0;
+}
+
+.app-box-item-left .app-downloads-panel {
+	width: 120px;
+	height: 32px;
+	line-height: 32px;
+	overflow: hidden;
+	position: relative;
+}
+
+.app-box-item-left .app-downloads-panel span {
+	display: block;
+	width: 120px;
+	line-height: 32px;
+	height: 32px;
+	cursor: pointer;
+	position: absolute;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.app-box-item-left .app-downloads-panel .app-update-time {
+	background: #F9F7F7;
+	top: 0;
+}
+
+.app-box-item-left .app-downloads-panel .app-download {
+	top: 32px;
+	background: #FF9000;
+}
+
+.app-download {
+	color: #fff;
+}
+.app-box-item a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.app-box-item:hover .app-update-time {
+	top: -32px;
+}
+
+.app-box-item:hover .app-download {
+	top: 0;
+}
+
+.app-box-item-left .product-grade ul li {
+	margin-right: 0px;
+}
+
+.app-box-item-right {
+	width: 230px;
+	margin-top: 24px;
+	text-align: left;
+	float: left;
+}
+
+.app-box-item-right .product-name {
+	width: 180px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.app-describe {
+	width: 204px;
+	height: 60px;
+	color: #999;
+	margin: 18px 0 32px;
+	overflow: hidden;
+}
+
+.app-box-item-right div,
+.app-box-item-right span {
+	float: left;
+	font-size: 12px;
+}
+
+.app-box-item-right span {
+	color: #999;
+	margin-right: 3px;
+}
+
+.app-box-item-right .product-size {
+	margin-right: 10px;
+}
+
+.lottery-app-page-content .play-paging {
+	width: 100%;
+	float: left;
+}
