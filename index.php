@@ -13,8 +13,8 @@ define('ROOT_PATH', __DIR__ . '/');
 // 开启调试模式
 // define('APP_DEBUG',True);
 
-echo microtime(true);
-echo '<br>';
+// echo microtime(true);
+// echo '<br>';
 
 $svr = explode('.', $_SERVER['HTTP_HOST']);
 if (count($svr) == 2) {

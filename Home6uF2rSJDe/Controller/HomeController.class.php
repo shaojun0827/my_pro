@@ -24,8 +24,8 @@ class HomeController extends Controller {
     }
 
     public function _after_index(){
-        echo microtime(true);
-        echo '<br>';
+        // echo microtime(true);
+        // echo '<br>';
         die();
     }
 }
