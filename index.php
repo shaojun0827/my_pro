@@ -25,7 +25,7 @@ if (count($svr) == 2) {
 } else {
 	define('HTML_PATH', "/home/product/{$svr[2]}/{$svr[1]}/{$svr[0]}");
 }
-$file_path = $html_path.$_SERVER['REQUEST_URI'];
+$file_path = HTML_PATH.$_SERVER['REQUEST_URI'];
 
 if (!file_exists($file_path)) {
     if (!file_exists(HTML_PATH)) {
