@@ -9,7 +9,7 @@ function show_log($msg){
 // 检测PHP版本 必须PHP5.5以上哦
 if(version_compare(PHP_VERSION,'5.5.0','<'))  die('require PHP > 5.5.0 ! PHP版本必须PHP5.5以上！');
 
-define('ROOT_PATH', __DIR__ . '/');
+define('ROOT_PATH', '/home/product');
 // 开启调试模式
 // define('APP_DEBUG',True);
 
