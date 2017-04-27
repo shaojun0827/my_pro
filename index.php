@@ -25,11 +25,10 @@ if (count($svr) == 2) {
 } else {
 	define('HTML_PATH', "/home/product/{$svr[2]}/{$svr[1]}/{$svr[0]}");
 }
-$html_path = '/home/product/'.HTML_PATH;
 $file_path = $html_path.$_SERVER['REQUEST_URI'];
-echo $file_path;
+
 if (!file_exists($file_path)) {
-    if (!file_exists($html_path)) {
+    if (!file_exists(HTML_PATH)) {
         $server_name = $_SERVER['SERVER_NAME'];
         // system("touch /usr/local/openresty/nginx/conf/sites-enabled/{$server_name}.conf", $result);
         // system("cat > /usr/local/openresty/nginx/conf/sites-enabled/{$server_name}.conf << EOF
