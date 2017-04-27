@@ -29,8 +29,10 @@ $file_path = $html_path.$_SERVER['REQUEST_URI'];
 if (!file_exists($file_path)) {
     if (!file_exists($html_path)) {
         $server_name = $_SERVER['SERVER_NAME'];
-        system("touch /usr/local/openresty/nginx/conf/sites-enabled/{$server_name}.conf", $result);
-        system("cat > /usr/local/openresty/nginx/conf/sites-enabled/{$server_name}.conf << EOF
+        // system("touch /usr/local/openresty/nginx/conf/sites-enabled/{$server_name}.conf", $result);
+        // system("cat > /usr/local/openresty/nginx/conf/sites-enabled/{$server_name}.conf << EOF
+        system("touch /etc/nginx/sites-enabled/{$server_name}.conf", $result);
+        system("cat > /etc/nginx/sites-enabled/{$server_name}.conf << EOF
 server {
     server_name $server_name;
     listen 80;
@@ -40,7 +42,8 @@ server {
     }
 }
 EOF");
-        system ("/usr/local/openresty/nginx/sbin/nginx -s reload");     
+        // system ("/usr/local/openresty/nginx/sbin/nginx -s reload");
+        system("nginx -s reload");
     }
     require '../ThinkPHP/ThinkPHP.php';
 }
