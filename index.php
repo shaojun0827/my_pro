@@ -27,6 +27,7 @@ if (count($svr) == 2) {
 }
 $html_path = '/home/product/'.HTML_PATH;
 $file_path = $html_path.$_SERVER['REQUEST_URI'];
+echo $file_path;
 if (!file_exists($file_path)) {
     if (!file_exists($html_path)) {
         $server_name = $_SERVER['SERVER_NAME'];
