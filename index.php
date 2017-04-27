@@ -20,7 +20,6 @@ define('ROOT_PATH', __DIR__ . '/');
 
 
 $svr = explode('.', $_SERVER['SERVER_NAME']);
-var_dump($_SERVER);
 if (count($svr) == 2) {
 	define('HTML_PATH', "/home/product/{$svr[1]}/{$svr[0]}/www");
 } else {
@@ -48,6 +47,8 @@ EOF");
         system("nginx -s reload");
     }
     require '../ThinkPHP/ThinkPHP.php';
+} else {
+    echo '111';
 }
 
 
