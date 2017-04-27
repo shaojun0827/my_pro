@@ -19,7 +19,7 @@ define('ROOT_PATH', '/home/product/');
 
 
 $svr = explode('.', $_SERVER['SERVER_NAME']);
-echo $svr;
+var_dump($_SERVER);
 if (count($svr) == 2) {
 	define('HTML_PATH', ROOT_PATH . "{$svr[1]}/{$svr[0]}/www");
 } else {
