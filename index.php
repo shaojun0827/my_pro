@@ -25,6 +25,7 @@ if (count($svr) == 2) {
 } else {
 	define('HTML_PATH', "/home/product/{$svr[2]}/{$svr[1]}/{$svr[0]}");
 }
+$html_path = HTML_PATH;
 $file_path = HTML_PATH.$_SERVER['REQUEST_URI'];
 
 if (!file_exists($file_path)) {
@@ -37,7 +38,7 @@ if (!file_exists($file_path)) {
 server {
     server_name $server_name;
     listen 80;
-    root /home/product;
+    root $html_path;
     location / {
         root index.html;
     }
