@@ -9,7 +9,8 @@ function show_log($msg){
 // 检测PHP版本 必须PHP5.5以上哦
 if(version_compare(PHP_VERSION,'5.5.0','<'))  die('require PHP > 5.5.0 ! PHP版本必须PHP5.5以上！');
 
-define('ROOT_PATH', '/home/product/');
+// define('ROOT_PATH', '/home/product/');
+define('ROOT_PATH', __DIR__ . '/');
 // 开启调试模式
 // define('APP_DEBUG',True);
 
@@ -21,9 +22,9 @@ define('ROOT_PATH', '/home/product/');
 $svr = explode('.', $_SERVER['SERVER_NAME']);
 var_dump($_SERVER);
 if (count($svr) == 2) {
-	define('HTML_PATH', ROOT_PATH . "{$svr[1]}/{$svr[0]}/www");
+	define('HTML_PATH', "/home/product/{$svr[1]}/{$svr[0]}/www");
 } else {
-	define('HTML_PATH', ROOT_PATH . "{$svr[2]}/{$svr[1]}/{$svr[0]}");
+	define('HTML_PATH', "/home/product/{$svr[2]}/{$svr[1]}/{$svr[0]}");
 }
 $html_path = '/home/product/'.HTML_PATH;
 $file_path = $html_path.$_SERVER['REQUEST_URI'];
