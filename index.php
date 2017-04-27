@@ -16,12 +16,33 @@ define('ROOT_PATH', __DIR__ . '/');
 // echo microtime(true);
 // echo '<br>';
 
-$svr = explode('.', $_SERVER['HTTP_HOST']);
+
+
+$svr = explode('.', $_SERVER['SERVER_NAME']);
 if (count($svr) == 2) {
-	define('HTML_PATH', ROOT_PATH . "static/{$svr[1]}/{$svr[0]}/www");
+	define('HTML_PATH', ROOT_PATH . "{$svr[1]}/{$svr[0]}/www");
 } else {
-	define('HTML_PATH', ROOT_PATH . "static/{$svr[2]}/{$svr[1]}/{$svr[0]}");
+	define('HTML_PATH', ROOT_PATH . "{$svr[2]}/{$svr[1]}/{$svr[0]}");
+}
+$html_path = '/home/product/'.HTML_PATH;
+$file_path = $html_path.$_SERVER['REQUEST_URI'];
+if (!file_exists($file_path)) {
+    if (!file_exists($html_path)) {
+        $server_name = $_SERVER['SERVER_NAME'];
+        system("touch /usr/local/openresty/nginx/conf/sites-enabled/{$server_name}.conf", $result);
+        system("cat > /usr/local/openresty/nginx/conf/sites-enabled/{$server_name}.conf << EOF
+server {
+    server_name $server_name;
+    listen 80;
+    root /home/product;
+    location / {
+        root index.html;
+    }
+}
+EOF");
+        system ("/usr/local/openresty/nginx/sbin/nginx -s reload");     
+    }
+    require '../ThinkPHP/ThinkPHP.php';
 }
 
 
-require '../ThinkPHP/ThinkPHP.php';
