@@ -1,7 +1,7 @@
 <?php
 namespace Home6uF2rSJDe\Controller;
 use Home6uF2rSJDe\Controller\HomeController;
-class ListController extends HomeController {
+class ListsController extends HomeController {
     public function index(){
         $path = isset($_GET['path']) ? $_GET['path'] : '';
         $noSuffix_path = HTML_PATH . "/{$path}";
