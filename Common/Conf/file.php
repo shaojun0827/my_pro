@@ -23,9 +23,6 @@ return array(
 
     'TEMPLATE_PATH'         => 'template/',
     'ARTICLE_FILE_PATH'     => 'articles/',
-    'ARTICLE_FILE'          => array(
-        '1'
-    ),
 
     'TITLE_FILE_PATH'       => 'title/',
     'KEYWORDS_FILE_PATH'    => 'keywords/',

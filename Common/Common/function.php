@@ -3,13 +3,14 @@
      * 随机获取数字和字母组合
      */
     function randWord($left, $right){
-        $left  = $left < 1 ? 1 : $left;
-        $right = $right < $left ? $left : $right;
-        $str   = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ0123456789';
-        $rand  = mt_rand($left, $right);
-        $res   = '';
-        for ($i=0; $i < $rand; $i++) {
-            $_rand = mt_rand(0, 61);
+        $left   = $left < 1 ? 1 : $left;
+        $right  = $right < $left ? $left : $right;
+        $str    = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ0123456789';
+        $strLen = strlen($str)-1;
+        $rand   = mt_rand($left, $right);
+        $res    = '';
+        for ($i = 0; $i < $rand; $i++) {
+            $_rand = mt_rand(0, $strLen);
             $res  .= $str{$_rand};
         }
         return $res;
@@ -30,13 +31,19 @@
      */
 	function getUrl(){
         // 获取链接随机层数
-        $num = randNum(1, 3);
+        $num = randNum(C('URL_RAND_FLOOR_NUM_LEAST'), C('URL_RAND_FLOOR_NUM_MOST'));
         $url = '';
-        for ($i=0; $i < $num; $i++) { 
-            $url .= '/' . randWord(4, 8);
+        for ($i=0; $i < $num; $i++) {
+            $url .= '/' . randWord(C('URL_FLOOR_CHAR_NUM_LEAST'), C('URL_FLOOR_CHAR_NUM_MOST'));
         }
-        $rand = randNum(1, 100);
-        $url  = $rand > 60 ? $url : $url . '.html';
+        $precent  = C('URL_HAS_SUFFIX_PRECENT');
+        if ($precent >= 1 && $precent <= 0) {
+            $precent = 0.5;
+        }
+        $numArr   = explode('.', $precent);
+        $totalNum = pow(10, strlen($numArr[1]));
+        $rand     = randNum(1, $totalNum);
+        $url      = $rand > intval($numArr[0]) ? $url : $url . '.html';
         return $url;
     }
 
