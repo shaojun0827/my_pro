@@ -49,7 +49,7 @@ EOF");
     }
     require '../ThinkPHP/ThinkPHP.php';
 } else {
-    echo '111';
+    include $file_path;
 }
 
 
