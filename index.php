@@ -25,31 +25,31 @@ if (count($svr) == 2) {
 } else {
 	define('HTML_PATH', "/home/product/{$svr[2]}/{$svr[1]}/{$svr[0]}");
 }
-$html_path = HTML_PATH;
-$file_path = HTML_PATH.$_SERVER['REQUEST_URI'];
-
-if (!file_exists($file_path)) {
-    if (!file_exists(HTML_PATH)) {
-        $server_name = $_SERVER['SERVER_NAME'];
-        // system("touch /usr/local/openresty/nginx/conf/sites-enabled/{$server_name}.conf", $result);
-        // system("cat > /usr/local/openresty/nginx/conf/sites-enabled/{$server_name}.conf << EOF
-        system("touch /etc/nginx/sites-enabled/{$server_name}.conf", $result);
-        system("cat > /etc/nginx/sites-enabled/{$server_name}.conf << EOF
-server {
-    server_name $server_name;
-    listen 80;
-    root $html_path;
-    location / {
-        root index.html;
-    }
-}
-EOF");
-        // system ("/usr/local/openresty/nginx/sbin/nginx -s reload");
-        system("nginx -s reload");
-    }
-    require '../ThinkPHP/ThinkPHP.php';
-} else {
-    include $file_path;
-}
+// $html_path = HTML_PATH;
+// $file_path = HTML_PATH.$_SERVER['REQUEST_URI'];
+require '../ThinkPHP/ThinkPHP.php';
+// if (!file_exists($file_path)) {
+//     if (!file_exists(HTML_PATH)) {
+//         $server_name = $_SERVER['SERVER_NAME'];
+//         // system("touch /usr/local/openresty/nginx/conf/sites-enabled/{$server_name}.conf", $result);
+//         // system("cat > /usr/local/openresty/nginx/conf/sites-enabled/{$server_name}.conf << EOF
+//         system("touch /etc/nginx/sites-enabled/{$server_name}.conf", $result);
+//         system("cat > /etc/nginx/sites-enabled/{$server_name}.conf << EOF
+// server {
+//     server_name $server_name;
+//     listen 80;
+//     root $html_path;
+//     location / {
+//         root index.html;
+//     }
+// }
+// EOF");
+//         // system ("/usr/local/openresty/nginx/sbin/nginx -s reload");
+//         system("nginx -s reload");
+//     }
+//     require '../ThinkPHP/ThinkPHP.php';
+// } else {
+//     include $file_path;
+// }
 
 
